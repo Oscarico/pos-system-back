@@ -1,0 +1,27 @@
+package com.osulaa.possystem.dto.category;
+
+import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class CategoryResponse {
+
+    private Long id;
+
+    private String name;
+
+    private String description;
+
+    private Boolean active;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime createdAt;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime updatedAt;
+}
